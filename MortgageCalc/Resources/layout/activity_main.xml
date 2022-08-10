@@ -1,0 +1,86 @@
+<?xml version              ="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app              ="http://schemas.android.com/apk/res-auto"
+    xmlns:tools            ="http://schemas.android.com/tools"
+    android:layout_width   ="match_parent"
+    android:layout_height  ="match_parent"
+    android:id             ="@+id/activity_main"
+    android:orientation    ="vertical"
+    android:padding        ="10dp">
+    <ScrollView
+        android:layout_width ="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width ="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation  ="vertical">
+            <LinearLayout
+                android:orientation  ="horizontal"
+                android:layout_width ="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text         ="Стоимость недвижимости, тыс. руб.:"
+                    android:layout_width ="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id           ="@+id/edtPrice"
+                    android:inputType    ="number"
+                    android:maxLength    ="5"
+                    android:layout_width ="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <SeekBar
+                android:layout_width ="match_parent"
+                android:layout_height="wrap_content"
+                android:min          ="0"
+                android:max          ="15000"
+                android:progress     ="1500"
+                android:id           ="@+id/seekBarPrice"/>
+            <TextView
+                android:id           ="@+id/txtFirstPay"
+                android:layout_width ="match_parent"
+                android:layout_height="wrap_content"/>
+            <SeekBar
+                android:layout_width ="match_parent"
+                android:layout_height="wrap_content"
+                android:min          ="0"
+                android:max          ="100"
+                android:progress     ="60"
+                android:id           ="@+id/seekBarFirstPay"/>
+            <TextView
+                android:text         ="Сумма кредита, тыс. руб."
+                android:layout_width ="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width ="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle    ="bold"
+                android:id           ="@+id/txtCredit"/>
+            <TextView
+                android:id           ="@+id/txtYear"
+                android:layout_width ="match_parent"
+                android:layout_height="wrap_content"/>
+            <SeekBar
+                android:layout_width ="match_parent"
+                android:layout_height="wrap_content"
+                android:min          ="0"
+                android:max          ="25"
+                android:progress     ="10"
+                android:id           ="@+id/SeekBarYear"/>
+            <CheckBox
+                android:text         ="Добавить материнский капитал"
+                android:layout_width ="match_parent"
+                android:layout_height="wrap_content"
+                android:id           ="@+id/checkBoxAddKap"/>
+            <Button
+                android:text         ="Рассчитать"
+                android:layout_width ="match_parent"
+                android:layout_height="wrap_content"
+                android:id           ="@+id/buttonRun"/>
+            <TextView
+                android:layout_width ="match_parent"
+                android:layout_height="wrap_content"
+                android:id           ="@+id/txtResult"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
